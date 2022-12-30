@@ -141,24 +141,59 @@ main{
     box-shadow: 0 0.1rem 0.4rem rgba(0, 102, 235, 0.658);
 }
 
-section article img{
+.card img{
     border-radius: 0.4rem 0.4rem 0 0;
     width: 300px;
     height: 200px;
     object-fit: cover;
 }
 
-section article h2{
-    color: white;
-    margin: 0.5rem 1rem;
-    
+.cardForum {
+    transition: box-shadow 0.3s ease;
+    background-color: #274260;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    max-width: 500px;
 }
 
-section article p,section article h3{
+.cardForum:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 102, 235, 0.658);
+}
+
+.cardForum img{
+    border-radius: 0.4rem 0.4rem 0 0;
+    width: 500px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardForum p {
+    max-height: 50px;
+    width: 450px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+h2{
+    color: white;
+    margin: 0.5rem 1rem;
+}
+
+h4{
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+
+section article p,section article h3,section article h4, section article a{
     display: inline-block;
-    margin: 0 0.5rem 0 1rem;
+    margin: 0 0.5rem 1rem 1rem;
     color: white;
 }
+
 
 footer{
     background-color: #426f9c;
@@ -175,18 +210,19 @@ footer p{
     margin: 0;
 }
 
-footer a{
+a{  
+    cursor: pointer;
     margin: 0.5rem; 
     transition: color 0.3 ease;
     color: white;
     text-decoration: none;
 }
 
-footer a:hover{
+a:hover{
     color: #121e2a;
 }
 
-@media (max-width: 952px){
+@media (max-width: 1150px){
 
     label.logo{
         font-size: 30px;
@@ -195,6 +231,21 @@ footer a:hover{
 
     nav ul li a{
         font-size: 16px;
+    }
+
+    .cardForum {
+        margin: 1rem;
+        max-width: 300px;
+    }
+    
+    
+    .cardForum img{
+        width: 300px;
+        height: 200px;
+    }
+
+    .cardForum p {
+        width: 250px;
     }
 }
 

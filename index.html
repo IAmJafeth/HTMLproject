@@ -9,7 +9,7 @@
     <script src="scripts/script.js" defer></script>
     <script src="https://kit.fontawesome.com/54084e568f.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="getTopMetacriticGames()">
     <nav>
         <input type="checkbox"  id="check">
         <label for ="check" class="checkbtn">
@@ -26,23 +26,22 @@
     <main>
         <div style="margin-bottom: 3rem;">
             <input type="text" id="gamesearch" class="search" placeholder="Search 488,835 games"/>            
-            <input type="submit" id="searchsubmit" class="button" value="Search" onclick=>
+            <input type="submit" id="searchsubmit" class="button" value="Search" onclick="submitGameSearch()" >
         </div>
-        <div id="metasec" style= "color: white;">
-            <h1>Games Awarded by Metacritic</h1>
+        <div style= "color: white;">
+            <h1 id="searchGamesTitle">Games Awarded by Metacritic</h1>
             <section id="20MetaGames" class="container">
 
                 <!-- <article class="card">
-                    <img src="image URL" alt="">
+                    <img src="img/GamePlaceHolder.png" alt="">
                     <h2>Game Title</h2>
                     <h3>Metacritic: </h3> <p>Score / 100</p>
                     <br>
                     <h3>Release Date: </h3> <p>Date</p>
                 </article> -->
-                
-                
             </section>
         </div>
+
         
     </main>
 
@@ -51,8 +50,8 @@
     <footer>
         <p>Copyright 2022</p>
         <section>
-            <a href="mailto:jgarroro@cisco.com"> Contáctame a mi correo </a>
-            <a href="#logo"> Regresar al Inicio </a>
+            <a href="mailto:jgarroro@cisco.com"> Send me an email! </a>
+            <a href="#logo"> Back to top </a>
         <section>
     </footer>
 </body>
