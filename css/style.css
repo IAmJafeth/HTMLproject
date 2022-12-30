@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh; 
+    margin:0;
+    background: #121e2a;
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+nav{
+    background: #18283a;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    padding: 7px 13px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+a.active {
+    border-radius: 7px;
+    background: #18283a;
+    box-shadow: inset 4px 4px 9px #101a26,
+            inset -4px -4px 9px #3e6a9a;
+
+}
+
+nav ul li a:hover{
+    border-radius: 7px;
+    background: #18283a;
+    box-shadow: inset 4px 4px 4px #0e1823,
+            inset -4px -4px 4px #223851;
+}
+
+.checkbtn{ 
+    display: none;
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+main{
+    margin: 1% 2%;
+}
+
+.search{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: 500px;
+    height: 50px;
+    margin-right: 1rem;
+    text-align: left;
+    text-indent: 1rem;
+}
+
+.button {
+    height: 50px;
+    width: 100px;
+    top: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+    font: bold 1.25rem/1 poppins;
+    color: #62a5e8;
+    border-radius: 5px;
+    background: #121e2a;
+    box-shadow:  10px 10px 25px #080e14,
+                -10px -10px 25px #1c2e40;
+    border: none;
+}
+
+.button:hover{
+    background: linear-gradient(145deg, #13202d, #101b26);
+    box-shadow:  10px 10px 25px #080e14,
+                -10px -10px 25px #1c2e40;
+}
+
+.button:active{
+    box-shadow: inset 10px 10px 25px #080e14,
+            inset -10px -10px 25px #1c2e40;
+}
+
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card {
+    transition: box-shadow 0.3s ease;
+    background-color: #274260;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    max-width: 300px;
+}
+
+.card:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 102, 235, 0.658);
+}
+
+section article img{
+    border-radius: 0.4rem 0.4rem 0 0;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+section article h2{
+    color: white;
+    margin: 0.5rem 1rem;
+    
+}
+
+section article p,section article h3{
+    display: inline-block;
+    margin: 0 0.5rem 0 1rem;
+    color: white;
+}
+
+footer{
+    background-color: #426f9c;
+    padding: 1rem;
+    color: white;
+}
+
+footer section {
+    float: right;
+}
+
+footer p{
+    display: inline-block;
+    margin: 0;
+}
+
+footer a{
+    margin: 0.5rem; 
+    transition: color 0.3 ease;
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #121e2a;
+}
+
+@media (max-width: 952px){
+
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px){
+
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #172231;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 10vh;
+        line-height: 30px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    nav ul li a{
+        font-size: 30px;
+    }
+
+    a.active , nav ul li a:hover{
+        background: none;
+        color: #3574d2;
+        box-shadow: none;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    .search{
+        width: 300px;
+    }
+
+    .button{
+        margin-top: 1rem;
+    }
+
+}
